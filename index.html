@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 <html> 
-<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+<!-- The following ode has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
  
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
@@ -36,15 +36,43 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<link rel="stylesheet" href="w3-colors-flat.css">
 </head> 
 
+<!-- Hello World Set-up? -->
+	
 <script>
-
-	//YOUR JAVASCRIPT GOES HERE
-
-</script>	
+        var sti_count = 0;
+        var uti_count = 0;
 
 
-<!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
-<style>	
+        function stiAdd(){
+            sti_count = sti_count + 1;
+
+        }
+
+        function utiAdd(){
+            uti_count = uti_count + 1;
+        }
+
+	function showResults(){
+		var total = sti_count + allergy_count;
+		var stiPercent = sti_count/total;
+		var utiPercent = uti_count/total;
+		var paragraph = document.getElementById("Results");
+		var text = "The Probability it is a STI = " + stiPercent*100 + "%" + "<br>The Probability it is a UTI =" + stiPercent*100 + "%";
+		paragraph.innerHTML = text;
+	}
+		
+//I've edited this code almost 50 times, save me please
+// The following code lets you know when the file was last modified.
+// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
+       var docMod = document.lastModified;
+       alert("This file last modified  " + docMod);
+       console.log("This file last modified  " + docMod);
+// If you find the alert box annoying, comment out that line and timestamp will still show up in the debugging console
+
+
+</script>
+	
+<style>
 .body {
      margin: 0em;
 }
@@ -67,9 +95,324 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>STI or UTI?</h1>
+</div>
+
+<!-- Original Page Formatting I Copied and Pasted from Template  -->
+
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a STI but wonder if it is a UTI? Answer a few short questions to find out!</p>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product---it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<!-- DISCLAIMER! -->	
+	
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+<!-- Question 1 Formatting -->
+    	<div id="content" class="w3-container">
+        <p>Do you have any unusual discharge that is yellow, green, or frothy?</p>    
+<!-- Question 1 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <a href="#two" onclick="stiAdd();"class="w3-button w3-black">Yes</a>
+
+ <a href="#two" onclick="utiAdd();"class="w3-button w3-black">No</a>
+ </div>
+<!-- Button Commands -->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+<!-- Footer! -->
+	
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+	
+<!-- Page Two Styling -->
+	
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Do you have any genital sores, blisters, or ulcers?</p>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <a href="#three" onclick="stiAdd();"class="w3-button w3-black">Yes</a>
+
+ <a href="#three" onclick="utiAdd();"class="w3-button w3-black">No</a>
+ </div>
+
+<!-- Question 2 and Styling -->
+	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- Footer!! -->
+	
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- Page Three Styling -->
+
+	<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Do you have swollen lymph nodes, rashes, or flu-like symptoms?</p>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <a href="#four" onclick="stiAdd();"class="w3-button w3-black">Yes</a>
+
+ <a href="#four" onclick="utiAdd();"class="w3-button w3-black">No</a>
+ </div>
+
+<!-- Question 3 and Styling -->
+		
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- Footer!!! -->
+		
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- Page Four Styling -->
+
+	<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Do you feel an urgent or frequent need to urinate?</p>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<a href="#five" onclick="utiAdd();"class="w3-button w3-black">Yes</a>
+
+<a href="#five" onclick="stiAdd();"class="w3-button w3-black">No</a>
+</div>
+
+<!-- Question 4 and Styling -->
+		
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- Footer!!!! -->
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- Page Five Styling -->
+		
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Has your partner mentioned burning, discharge, or pain during urination?</p>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+<a href="#six" onclick="stiAdd();"class="w3-button w3-black">Yes</a>
+<a href="#six" onclick="utiAdd();"class="w3-button w3-black">No</a>
+
+</div>
+
+<!-- Question 5 and Styling -->
+		
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- Footer!!!!! -->
+	
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- Page Six Styling -->
+	
+	<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Do you feel discomfort specifically at the start or end of urination?</p>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<a href="#results" onclick="utiAdd(); showResults();"class="w3-button w3-black">Yes</a>
+<a href="#results" onclick="stiAdd(); showResults();"class="w3-button w3-black">No</a>
+ </div>
+
+<!-- Question 6 and Styling -->
+		
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- Footer!!!!!! -->
+		
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- Results Page Styling -->
+		
+    <div class="page" id="results">
+        <div class="w3-container w3-flat-carrot"><h1>Results</h1></div>
+        <div class="w3-container">
+            <p id="Results"></p>
+
+</div>
+
+	    <script>
+var resultText = document.getElementById("Results");resultText.innerHTML = "Probability it is a STI =" + stiPercent + "<br> Probability it is a uti =" + utiPercent; 
+            </script>
+	
+<!-- Results Code Hopefully -->
+	    
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
 </body>
 </html>
+
+<!-- Final Footer!!!!!!!!!!! -->
+<!-- I Swear If I Ever Finish This Code, I'll Never Complain About Anything Ever Again -->
