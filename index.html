@@ -53,11 +53,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
 	function showResults(){
-		var total = sti_count + uti_count;
+		var total = uti_count + sti_count;
 		var stiPercent = sti_count/total;
 		var utiPercent = uti_count/total;
 		var paragraph = document.getElementById("Results");
-		var text = "The Probability it is a STI = " + stiPercent*100 + "%" + "<br>The Probability it is a UTI =" + stiPercent*100 + "%";
+		var text = "The Probability it is a STI = " + stiPercent*100 + "%" + "<br>The Probability it is a UTI =" + utiPercent*100 + "%";
 		paragraph.innerHTML = text;
 	}
 		
